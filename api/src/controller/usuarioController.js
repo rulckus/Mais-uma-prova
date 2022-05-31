@@ -8,6 +8,10 @@ server.post('/usuario/login', async (req, resp) => {
         const {email, senha } = req.body;
 
         const resposta = await login (email, senha);
+        if(!resposta){
+            throw new Error('Credenciais inválidas')
+        }
+
         resp.send(resposta);
 
     } catch (err) {
@@ -18,5 +22,6 @@ server.post('/usuario/login', async (req, resp) => {
 
     }
 })
+
 
 export default server

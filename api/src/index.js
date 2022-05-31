@@ -12,7 +12,7 @@ server.use(express.json())
 
 server.use(usuarioController)
 server.use(filmeController)
-
+server.use('/storage/capaFilmes', express.static('storage/capasFilmes'))
 
 server.listen(process.env.PORT, ()=>
                 console.log(`Api Online na porta ${process.env.PORT}`))

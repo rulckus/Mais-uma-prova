@@ -6,7 +6,6 @@ import usuarioController from './controller/usuarioController.js'
 import filmeController from './controller/filmeController.js'
 
 const server=express()
-
 server.use(cors())
 server.use(express.json())
 
